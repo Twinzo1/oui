@@ -7,7 +7,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=node
+PKG_NAME:=oui-node
 PKG_VERSION:=v8.16.1
 PKG_RELEASE:=1
 PKG_SOURCE:=node-$(PKG_VERSION).tar.xz
