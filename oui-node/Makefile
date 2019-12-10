@@ -1,30 +1,4 @@
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
-#
 
-include $(TOPDIR)/rules.mk
-
-PKG_NAME:=oui-node
-PKG_VERSION:=v10.9.0
-PKG_RELEASE:=1
-
-PKG_SOURCE:=node-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=http://nodejs.org/dist/${PKG_VERSION}
-PKG_MD5SUM:=b40206ccf08483582eca1876f56cc7d5
-
-PKG_INSTALL:=1
-PKG_USE_MIPS16:=0
-HOST_BUILD_PARALLEL:=1
-HOST_BUILD_DIR:=$(BUILD_DIR_HOST)/node-$(PKG_VERSION)
-
-PKG_MAINTAINER:=Juno <baidxi404629@gmail.com>
-PKG_LICENSE:=
-
-include $(INCLUDE_DIR)/host-build.mk
-include $(INCLUDE_DIR)/package.mk
-
-define Package/oui-node
   SECTION:=oui
   CATEGORY:=OUI
   TITLE:=node for OUI 
