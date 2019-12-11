@@ -198,7 +198,7 @@ export default {
           [this.$t('Uptime'), '%t'.format(uptime)]
         ];
 
-        this.resourceChart.series[1].data[0].value = ((memory.total - memory.free) / memory.total * 100).toFixed(2);
+        this.resourceChart.series[1].data[0].value = ((memory.total - memory.free - memory.buffered) / memory.total * 100).toFixed(2);
       });
 
       this.$network.load().then(() => {
